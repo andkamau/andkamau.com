@@ -31,6 +31,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Mono font for logo -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/styles.css">
@@ -41,9 +43,9 @@
 <body>
   <header class="header">
     <div class="header-content">
-      <h1 class="logo">Andrew Kamau</h1>
+      <a href="/" class="logo"><span class="brand-slash">//</span>AKM</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-icon">🌙</span>
+        <span class="theme-icon">◐</span>
       </button>
     </div>
   </header>
@@ -52,7 +54,7 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-photo reveal">
-        <img src="/photo.webp" alt="Andrew Kamau" width="120" height="120" loading="lazy">
+        <img src="/photo.jpg" alt="Andrew Kamau" width="120" height="120" loading="lazy">
       </div>
 
       <div class="hero-content reveal">
@@ -68,57 +70,101 @@
         <a href="https://github.com/andkamau" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <span class="link-icon">🐙</span> GitHub
         </a>
-        <a href="https://pypi.org/user/andkamau/" target="_blank" rel="noopener noreferrer" aria-label="PyPI">
-          <span class="link-icon">📦</span> PyPI
-        </a>
-        <a href="mailto:andkamau@gmail.com" aria-label="Email">
-          <span class="link-icon">✉️</span> Email
-        </a>
       </div>
     </section>
 
-    <!-- Featured Video Section -->
-    <section class="featured-video">
+    <!-- About Section -->
+    <section class="about reveal">
+      <div class="about-content">
+        <p>Building AI-native products at the intersection of emerging technology and underserved users. For the past 5 years, I've been shipping safety features at Google Chrome to billions of users. Before that, I spent 10 years building fintech products in Africa — co-founding a company, leading product at another, and contributing to investigative journalism tech infrastructure.</p>
+
+        <p>I'm currently focused on how AI agents can be safely deployed in high-constraint environments: e.g. limited connectivity, resource-scarce devices, and markets where trust is earned differently.</p>
+      </div>
+    </section>
+
+    <!-- Latest Section -->
+    <section class="latest-ships">
       <div class="section-header">
         <span class="section-label">Latest</span>
       </div>
 
-      <h3 class="video-title">Chrome Product Manager Talks Online Safety</h3>
-      <p class="video-meta">Official Google Chrome • Feb 2025 • 29K views</p>
+      <div class="ships-grid">
+        <!-- 1. Gistify (Chrome Ext) -->
+        <div class="ship-item reveal">
+          <div class="ship-header">
+            <h3 class="ship-title">Gistify</h3>
+            <span class="ship-badge">Chrome extension</span>
+          </div>
+          <p class="ship-description">Transform your Chrome reading list into AI-powered summaries.</p>
+          <div class="ship-actions">
+            <a href="https://chromewebstore.google.com/detail/mdelhoioekbgjfkoalaoapebndllmlde" target="_blank" class="ship-cta primary">
+              Add to Chrome
+            </a>
+          </div>
+        </div>
 
-      <div class="video-container reveal">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/EsyoevqJ9Fo"
-          title="Chrome Product Manager Talks Online Safety"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
+        <!-- 2. OmniPrompt (PyPI) -->
+        <div class="ship-item reveal">
+          <div class="ship-header">
+            <h3 class="ship-title">OmniPrompt</h3>
+            <span class="ship-badge">Python library</span>
+          </div>
+          <p class="ship-description">Unified CLI for 6+ LLM providers. Simplify your AI workflow.</p>
+          <div class="ship-actions">
+            <a href="https://pypi.org/project/omniprompt/" target="_blank" class="ship-cta primary">
+              View on PyPI
+            </a>
+          </div>
+        </div>
 
-      <button id="toggle-past-talks" class="toggle-button">View past talks →</button>
-      <div id="past-talks" class="past-talks-container hidden">
-        <h4>Past Speaking Engagements</h4>
-        <ul class="past-talks-list">
-          <li>International Open Data Con, Madrid 2016</li>
-          <li>Africa Open Data Con, Nairobi 2016</li>
-          <li>Media Party Africa, Cape Town 2016</li>
-          <li>Nairobi Tech Week 2017 — "Chatbots for businesses"</li>
-          <li>Facebook DevC Meetup, Nairobi 2017</li>
-          <li>Demo Africa Lagos 2015</li>
-          <li>IBM Innovation Summit, Nairobi 2015</li>
-          <li>Citi Mobile Challenge, Nairobi 2015</li>
-        </ul>
+        <!-- 3. Video -->
+        <div class="ship-item reveal">
+           <div class="ship-header">
+             <h3 class="ship-title">Chrome Safety</h3>
+             <span class="ship-badge">Talk</span>
+           </div>
+           <p class="ship-description">Product Manager talk on building online safety features for billions.</p>
+           <div class="ship-actions">
+             <a href="https://www.youtube.com/watch?v=EsyoevqJ9Fo" target="_blank" class="ship-cta primary">
+               Watch Video
+             </a>
+           </div>
+        </div>
+
+        <!-- 4. Google Blog 1 -->
+        <div class="ship-item reveal">
+           <div class="ship-header">
+             <h3 class="ship-title">5 Tips to Stay Safer</h3>
+             <span class="ship-badge">Google Blog</span>
+           </div>
+           <p class="ship-description">Official guide on using Chrome's built-in security tools to protect your data.</p>
+           <div class="ship-actions">
+             <a href="https://blog.google/products-and-platforms/products/chrome/5-tips-to-stay-safer-online-with-chrome/" target="_blank" class="ship-cta primary">
+               Read Article
+             </a>
+           </div>
+        </div>
+
+        <!-- 5. Google Blog 2 -->
+        <div class="ship-item reveal">
+           <div class="ship-header">
+             <h3 class="ship-title">Safety Update</h3>
+             <span class="ship-badge">Google Blog</span>
+           </div>
+           <p class="ship-description">Announcing new proactive safety features for Chrome users worldwide.</p>
+           <div class="ship-actions">
+             <a href="https://blog.google/products-and-platforms/products/chrome/google-chrome-safety-update-september-2024/" target="_blank" class="ship-cta primary">
+               Read Article
+             </a>
+           </div>
+        </div>
       </div>
     </section>
 
     <!-- Projects Section -->
     <section class="projects">
       <div class="section-header">
-        <h2>Featured Work</h2>
+        <span class="section-label">Featured</span>
       </div>
 
       <div class="projects-grid">
@@ -142,23 +188,7 @@
           </a>
         </article>
 
-        <!-- Project 3: Gistify -->
-        <article class="project-card reveal">
-          <h3 class="project-title">Gistify</h3>
-          <p class="project-subtitle">Reading List Summarizer</p>
-          <p class="project-badge">Published</p>
-          <p class="project-description">Transform your Chrome reading list into AI-powered summaries.</p>
-          <div class="project-link-group">
-            <a href="https://chromewebstore.google.com/detail/mdelhoioekbgjfkoalaoapebndllmlde" target="_blank" rel="noopener noreferrer" class="project-link">
-              Chrome Web Store <span class="external-link">↗</span>
-            </a>
-            <a href="https://github.com/andkamau/gistify" target="_blank" rel="noopener noreferrer" class="project-link">
-              GitHub <span class="external-link">↗</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 4: Hadithi -->
+        <!-- Project 3: Hadithi -->
         <article class="project-card reveal">
           <h3 class="project-title">Hadithi</h3>
           <p class="project-subtitle">Articles to Podcast Audio</p>
@@ -168,7 +198,7 @@
           </a>
         </article>
 
-        <!-- Project 5: Stawi -->
+        <!-- Project 4: Stawi -->
         <article class="project-card reveal">
           <h3 class="project-title">Stawi</h3>
           <p class="project-subtitle">AI Plant Care Companion</p>
@@ -178,19 +208,14 @@
           </a>
         </article>
 
-        <!-- Project 6: OmniPrompt -->
+        <!-- Project 5: Chat Bots (Medium) -->
         <article class="project-card reveal">
-          <h3 class="project-title">OmniPrompt</h3>
-          <p class="project-subtitle">Multi-Provider LLM CLI</p>
-          <p class="project-description">Unified command-line interface for 6+ LLM providers including Gemini, Claude, and GPT-4.</p>
-          <div class="project-link-group">
-            <a href="https://pypi.org/project/omniprompt/" target="_blank" rel="noopener noreferrer" class="project-link">
-              PyPI <span class="external-link">↗</span>
-            </a>
-            <a href="https://github.com/andkamau/omniprompt" target="_blank" rel="noopener noreferrer" class="project-link">
-              GitHub <span class="external-link">↗</span>
-            </a>
-          </div>
+          <h3 class="project-title">Chat Bots & PIA</h3>
+          <p class="project-subtitle">Pre-LLM Conversational AI</p>
+          <p class="project-description">Reflections on building conversational interfaces for businesses before the generative AI wave.</p>
+          <a href="https://medium.com/pia-blog/chat-bots-pia-c02a8f9fb668" target="_blank" rel="noopener noreferrer" class="project-link">
+            Read on Medium <span class="external-link">↗</span>
+          </a>
         </article>
       </div>
     </section>
@@ -198,7 +223,7 @@
     <!-- Open Source Section -->
     <section class="open-source">
       <div class="section-header">
-        <h2>Open Source</h2>
+        <h2>Open Source Contributions</h2>
       </div>
 
       <div class="open-source-list reveal">
@@ -211,21 +236,8 @@
         </article>
 
         <article class="open-source-item">
-          <h4>OmniPrompt</h4>
-          <p>Multi-provider LLM CLI, published on PyPI</p>
-          <div class="open-source-links">
-            <a href="https://pypi.org/project/omniprompt/" target="_blank" rel="noopener noreferrer">
-              PyPI <span class="external-link">↗</span>
-            </a>
-            <a href="https://github.com/andkamau/omniprompt" target="_blank" rel="noopener noreferrer">
-              GitHub <span class="external-link">↗</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="open-source-item">
           <h4>Aleph</h4>
-          <p>Data search and indexing for investigative journalists</p>
+          <p>Data search and indexing for investigative journalists (OCCRP)</p>
           <a href="https://github.com/alephdata/aleph" target="_blank" rel="noopener noreferrer">
             GitHub <span class="external-link">↗</span>
           </a>
@@ -233,26 +245,27 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
-      <div class="section-header">
-        <h2>About</h2>
-      </div>
-
-      <div class="about-content reveal">
-        <p>I build AI-native products at the intersection of emerging technology and underserved markets. For the past 5 years, I've been shipping AI-powered safety features at Google Chrome to billions of users. Before that, I spent 8 years building fintech products in East Africa — co-founding a company, leading product at another, and contributing to investigative journalism infrastructure like the Panama Papers.</p>
-
-        <p>I'm currently focused on how AI agents can be deployed in high-constraint environments: limited connectivity, resource-scarce devices, and markets where trust is earned differently. I believe the most interesting AI problems are outside Silicon Valley.</p>
+    <!-- Past Talks -->
+    <section class="past-talks-section">
+      <button id="toggle-past-talks" class="toggle-button">View past talks →</button>
+      <div id="past-talks" class="past-talks-container hidden">
+        <h4>Selected Speaking Engagements</h4>
+        <ul class="past-talks-list">
+          <li>International Open Data Con, Madrid</li>
+          <li>Africa Open Data Con, Nairobi</li>
+          <li>Media Party Africa, Cape Town</li>
+          <li>Nairobi Tech Week — "Chatbots for businesses"</li>
+          <li>Facebook Developer Circle, Nairobi</li>
+        </ul>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/kamauandrew" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
       <a href="https://github.com/andkamau" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-      <a href="https://pypi.org/user/andkamau/" target="_blank" rel="noopener noreferrer" aria-label="PyPI">PyPI</a>
-      <a href="mailto:andkamau@gmail.com" aria-label="Email">Email</a>
     </div>
     <p class="footer-text">© 2026 Andrew Kamau</p>
   </footer>

@@ -29,7 +29,7 @@
   function updateThemeIcon() {
     const icon = themeToggle.querySelector('.theme-icon');
     const isDark = html.dataset.theme === 'dark';
-    icon.textContent = isDark ? '☀️' : '🌙';
+    // Icon rotation handled by CSS
     themeToggle.setAttribute('aria-label', `Switch to ${isDark ? 'light' : 'dark'} mode`);
   }
 
