@@ -168,22 +168,14 @@
   // Track external link clicks
   document.querySelectorAll('a[target="_blank"]').forEach((link) => {
     link.addEventListener('click', function () {
-      if (window.plausible) {
-        const label = this.textContent.trim() || this.href;
-        window.plausible('Outbound Link', {
-          props: { url: this.href, label: label },
-        });
-      }
+      // Analytics removed
     });
   });
 
   // Track theme toggle
   const themeToggle = document.getElementById('theme-toggle');
   themeToggle.addEventListener('click', function () {
-    if (window.plausible) {
-      const theme = document.documentElement.dataset.theme;
-      window.plausible('Theme Toggle', { props: { theme: theme } });
-    }
+    // Analytics removed
   });
 })();
 

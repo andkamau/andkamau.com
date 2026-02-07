@@ -39,6 +39,10 @@
   --transition-fast: 0.15s ease;
   --transition-base: 0.2s ease;
   --transition-slow: 0.3s ease;
+
+  /* Gradient Mesh (Subtle) */
+  --bg-mesh: radial-gradient(at 80% 0%, rgba(13, 148, 136, 0.15) 0px, transparent 60%),
+             radial-gradient(at 20% 100%, rgba(161, 161, 170, 0.1) 0px, transparent 60%);
 }
 
 [data-theme='dark'] {
@@ -52,6 +56,10 @@
   --accent-hover: #5eead4;
   --border: #27272a; /* Zinc-800 */
   --code-bg: #27272a;
+
+  /* Gradient Mesh (Subtle Dark) */
+  --bg-mesh: radial-gradient(at 80% 0%, rgba(45, 212, 191, 0.12) 0px, transparent 60%),
+             radial-gradient(at 20% 100%, rgba(255, 255, 255, 0.03) 0px, transparent 50%);
 }
 
 /* =================================================================
@@ -74,6 +82,8 @@ body {
   line-height: var(--line-height);
   color: var(--text-primary);
   background-color: var(--bg-primary);
+  background-image: var(--bg-mesh);
+  background-attachment: fixed; /* Parallax-like fix */
   transition: background-color var(--transition-slow),
     color var(--transition-slow);
 }
@@ -114,21 +124,16 @@ img {
 .header {
   position: sticky;
   top: 0;
-  background-color: rgba(var(--bg-primary), 0.8); /* Fallback */
+  background-color: rgba(var(--bg-primary), 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 100;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--border);
   transition: border-color var(--transition-slow), background-color var(--transition-slow);
 }
 
-/* Add border only on scroll? Or always keep it subtle. */
-.header {
-  border-bottom: 1px solid var(--border);
-}
-
 .header-content {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
   padding: var(--space-md);
   display: flex;
@@ -143,10 +148,6 @@ img {
   letter-spacing: -0.5px;
   color: var(--text-primary);
   text-decoration: none;
-}
-
-.logo:hover {
-  color: var(--text-primary); /* No color change on hover */
 }
 
 .brand-slash {
@@ -175,8 +176,8 @@ img {
 .theme-icon {
   display: inline-block;
   transition: transform 0.5s ease;
-  color: currentColor; /* Force inheritance */
-  font-family: sans-serif; /* Avoid emoji fonts */
+  color: currentColor;
+  font-family: sans-serif;
 }
 
 [data-theme='dark'] .theme-icon {
@@ -188,13 +189,13 @@ img {
    ================================================================= */
 
 main {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 var(--space-md);
 }
 
 section {
-  margin: var(--space-3xl) 0;
+  margin: var(--space-xl) 0;
 }
 
 .section-header {
@@ -221,20 +222,28 @@ section {
 }
 
 /* =================================================================
+   INTRO WRAPPER (Hero + About)
+   ================================================================= */
+
+.intro-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-xl);
+  align-items: start;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+/* =================================================================
    HERO SECTION
    ================================================================= */
 
 .hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  /* Compressed vertical spacing */
-  margin: var(--space-xl) 0;
-}
-
-.hero-photo {
-  margin-bottom: var(--space-md);
+  align-items: flex-start;
+  text-align: left;
+  margin: 0;
 }
 
 .hero-photo img {
@@ -243,9 +252,6 @@ section {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border); 
-}
-
-.hero-content {
   margin-bottom: var(--space-md);
 }
 
@@ -267,15 +273,14 @@ section {
 .hero-description {
   font-size: 15px;
   color: var(--text-secondary);
-  max-width: 420px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 .hero-links {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: var(--space-md);
 }
 
@@ -292,18 +297,17 @@ section {
   color: var(--accent);
 }
 
-.link-icon {
-  font-size: 16px;
-}
-
 /* =================================================================
-   ABOUT SECTION (New Position)
+   ABOUT SECTION
    ================================================================= */
 
 .about {
-  margin: var(--space-xl) 0;
-  padding-bottom: var(--space-lg);
-  border-bottom: 1px solid var(--border);
+  margin: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .about-content {
@@ -322,7 +326,6 @@ section {
 
 .ships-grid {
   display: grid;
-  /* Force 3 equal columns */
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
 }
@@ -330,11 +333,10 @@ section {
 .ship-item {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border);
-  border-radius: 8px; /* Slightly tighter radius */
-  overflow: hidden;
+  border-radius: 8px;
+  padding: var(--space-md);
   display: flex;
   flex-direction: column;
-  padding: var(--space-md);
   transition: all var(--transition-base);
 }
 
@@ -342,8 +344,6 @@ section {
   border-color: var(--accent);
   transform: translateY(-2px);
 }
-
-/* Removed special styling for video-ship */
 
 .ship-header {
   margin-bottom: var(--space-sm);
@@ -365,7 +365,6 @@ section {
   background: rgba(13, 148, 136, 0.1);
   padding: 2px 6px;
   border-radius: 4px;
-  margin-bottom: 2px;
 }
 
 [data-theme='dark'] .ship-badge {
@@ -380,11 +379,6 @@ section {
   line-height: 1.5;
 }
 
-.ship-actions {
-  display: flex;
-  margin-top: auto;
-}
-
 .ship-cta {
   width: 100%;
   display: inline-flex;
@@ -394,25 +388,17 @@ section {
   border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
-  text-align: center;
-  transition: all var(--transition-base);
-  text-decoration: none;
-}
-
-.ship-cta.primary {
   background-color: var(--bg-tertiary);
   color: var(--text-primary);
-  border: 1px solid transparent;
 }
 
-.ship-cta.primary:hover {
+.ship-cta:hover {
   background-color: var(--accent);
   color: white;
 }
 
-
 /* =================================================================
-   PROJECTS SECTION (Grid)
+   PROJECTS SECTION
    ================================================================= */
 
 .projects-grid {
@@ -466,10 +452,6 @@ section {
   gap: 4px;
 }
 
-.external-link {
-  font-size: 12px;
-}
-
 /* =================================================================
    OPEN SOURCE SECTION
    ================================================================= */
@@ -481,7 +463,6 @@ section {
 }
 
 .open-source-item {
-  display: block; /* Reset */
   padding: var(--space-md);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -509,17 +490,10 @@ section {
 }
 
 .open-source-item p {
-  display: block;
-  margin-bottom: var(--space-sm);
   font-size: 14px;
   color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
 }
-
-.open-source-item a {
-  font-size: 13px;
-  font-weight: var(--font-weight-medium);
-}
-
 
 /* =================================================================
    PAST TALKS (Expando)
@@ -527,7 +501,7 @@ section {
 
 .past-talks-section {
   text-align: center;
-  margin-top: var(--space-3xl);
+  margin-top: var(--space-xl);
   padding-top: var(--space-xl);
   border-top: 1px solid var(--border);
 }
@@ -548,28 +522,14 @@ section {
   background-color: var(--bg-secondary);
 }
 
-.past-talks-container {
-  margin-top: var(--space-lg);
-  text-align: left;
-}
-
 .past-talks-container.hidden {
   display: none;
-}
-
-.past-talks-container h4 {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--text-secondary);
-  margin-bottom: var(--space-md);
-  text-align: center;
 }
 
 .past-talks-list {
   list-style: none;
   max-width: 500px;
-  margin: 0 auto;
+  margin: var(--space-lg) auto 0;
 }
 
 .past-talks-list li {
@@ -577,13 +537,11 @@ section {
   color: var(--text-secondary);
   padding: 8px 0;
   border-bottom: 1px solid var(--border);
-  text-align: center;
 }
 
 .past-talks-list li:last-child {
   border-bottom: none;
 }
-
 
 /* =================================================================
    FOOTER
@@ -593,8 +551,6 @@ section {
   margin-top: var(--space-3xl);
   padding: var(--space-xl) var(--space-md);
   text-align: center;
-  /* border-top handled by past talks section if visible, 
-     but let's keep footer distinct */
 }
 
 .footer-links {
@@ -607,10 +563,6 @@ section {
 .footer-links a {
   font-size: 13px;
   color: var(--text-secondary);
-}
-
-.footer-links a:hover {
-  color: var(--accent);
 }
 
 .footer-text {
@@ -633,27 +585,26 @@ section {
   animation: fadeIn 0.6s ease-out forwards;
 }
 
-.reveal:nth-child(1) { animation-delay: 0.1s; }
-.reveal:nth-child(2) { animation-delay: 0.15s; }
-.reveal:nth-child(3) { animation-delay: 0.2s; }
-.ships-grid .reveal:nth-child(1) { animation-delay: 0.1s; }
-.ships-grid .reveal:nth-child(2) { animation-delay: 0.2s; }
-.ships-grid .reveal:nth-child(3) { animation-delay: 0.3s; }
-
 /* =================================================================
    RESPONSIVE
    ================================================================= */
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .hero {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
+  
   .ships-grid {
-    grid-template-columns: 1fr; /* Stack on mobile */
-  }
-  
-  .hero-name {
-    font-size: 24px;
-  }
-  
-  .hero-tagline {
-    font-size: 16px;
+    grid-template-columns: 1fr;
   }
 }

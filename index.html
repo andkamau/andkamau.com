@@ -37,8 +37,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/styles.css">
 
-  <!-- Analytics -->
-  <script defer data-domain="andkamau.com" src="https://plausible.io/js/script.js"></script>
+
 </head>
 <body>
   <header class="header">
@@ -51,36 +50,45 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-photo reveal">
-        <img src="/photo.jpg" alt="Andrew Kamau" width="120" height="120" loading="lazy">
-      </div>
+    <!-- Intro Wrapper (Hero + About) -->
+    <div class="intro-wrapper">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-photo reveal">
+          <img src="/photo.jpg" alt="Andrew Kamau" width="120" height="120" loading="lazy">
+        </div>
 
-      <div class="hero-content reveal">
-        <h2 class="hero-name">Andrew Kamau</h2>
-        <p class="hero-tagline">AI-native builder</p>
-        <p class="hero-description">Building intelligent systems for underserved markets.</p>
-      </div>
+        <div class="hero-content reveal">
+          <h2 class="hero-name">Andrew Kamau</h2>
+          <p class="hero-tagline">AI-native builder</p>
+          <p class="hero-description">Building intelligent systems for underserved markets.</p>
+        </div>
 
-      <div class="hero-links reveal">
-        <a href="https://www.linkedin.com/in/kamauandrew" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <span class="link-icon">🔗</span> LinkedIn
-        </a>
-        <a href="https://github.com/andkamau" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <span class="link-icon">🐙</span> GitHub
-        </a>
-      </div>
-    </section>
+        <div class="hero-links reveal">
+          <a href="https://www.linkedin.com/in/kamauandrew" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+             LinkedIn
+          </a>
+          <a href="https://github.com/andkamau" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+             GitHub
+          </a>
+          <a href="mailto:andrew@andkamau.com" aria-label="Email">
+             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+             Email
+          </a>
+        </div>
+      </section>
 
-    <!-- About Section -->
-    <section class="about reveal">
-      <div class="about-content">
-        <p>Building AI-native products at the intersection of emerging technology and underserved users. For the past 5 years, I've been shipping safety features at Google Chrome to billions of users. Before that, I spent 10 years building fintech products in Africa — co-founding a company, leading product at another, and contributing to investigative journalism tech infrastructure.</p>
+      <!-- About Section -->
+      <section class="about reveal">
+        <div class="about-content">
+          <p>Building AI-native products at the intersection of emerging technology and underserved users. For the past 5 years, I've been shipping safety features at Google Chrome to billions of users. Before that, I spent 10 years building fintech products in Africa — co-founding a company, leading product at another, and contributing to investigative journalism tech infrastructure.</p>
 
-        <p>I'm currently focused on how AI agents can be safely deployed in high-constraint environments: e.g. limited connectivity, resource-scarce devices, and markets where trust is earned differently.</p>
-      </div>
-    </section>
+          <p>I'm currently focused on how AI agents can be safely deployed in high-constraint environments: e.g. limited connectivity, resource-scarce devices, and markets where trust is earned differently.</p>
+        </div>
+      </section>
+    </div>
 
     <!-- Latest Section -->
     <section class="latest-ships">
@@ -89,6 +97,20 @@
       </div>
 
       <div class="ships-grid">
+        <!-- Memoria (Chrome Ext) -->
+        <div class="ship-item reveal">
+          <div class="ship-header">
+            <h3 class="ship-title">Memoria</h3>
+            <span class="ship-badge">Chrome extension</span>
+          </div>
+          <p class="ship-description">Replace chrome://history with AI-grouped browsing sessions organized by semantic relevance.</p>
+          <div class="ship-actions">
+            <a href="https://chromewebstore.google.com/detail/memoria/cleecahcpnelippkmdcjhlbpllnibkdd" target="_blank" class="ship-cta primary">
+              Install Extension →
+            </a>
+          </div>
+        </div>
+
         <!-- 1. Gistify (Chrome Ext) -->
         <div class="ship-item reveal">
           <div class="ship-header">
@@ -98,9 +120,23 @@
           <p class="ship-description">Transform your Chrome reading list into AI-powered summaries.</p>
           <div class="ship-actions">
             <a href="https://chromewebstore.google.com/detail/mdelhoioekbgjfkoalaoapebndllmlde" target="_blank" class="ship-cta primary">
-              Add to Chrome
+              Try It Out →
             </a>
           </div>
+        </div>
+
+        <!-- 3. Video (Moved up) -->
+        <div class="ship-item reveal">
+           <div class="ship-header">
+             <h3 class="ship-title">Chrome Safety</h3>
+             <span class="ship-badge">Talk</span>
+           </div>
+           <p class="ship-description">Product Manager talk on building online safety features for billions.</p>
+           <div class="ship-actions">
+             <a href="https://www.youtube.com/watch?v=EsyoevqJ9Fo" target="_blank" class="ship-cta primary">
+               Watch Talk →
+             </a>
+           </div>
         </div>
 
         <!-- 2. OmniPrompt (PyPI) -->
@@ -112,23 +148,9 @@
           <p class="ship-description">Unified CLI for 6+ LLM providers. Simplify your AI workflow.</p>
           <div class="ship-actions">
             <a href="https://pypi.org/project/omniprompt/" target="_blank" class="ship-cta primary">
-              View on PyPI
+              Get Library →
             </a>
           </div>
-        </div>
-
-        <!-- 3. Video -->
-        <div class="ship-item reveal">
-           <div class="ship-header">
-             <h3 class="ship-title">Chrome Safety</h3>
-             <span class="ship-badge">Talk</span>
-           </div>
-           <p class="ship-description">Product Manager talk on building online safety features for billions.</p>
-           <div class="ship-actions">
-             <a href="https://www.youtube.com/watch?v=EsyoevqJ9Fo" target="_blank" class="ship-cta primary">
-               Watch Video
-             </a>
-           </div>
         </div>
 
         <!-- 4. Google Blog 1 -->
@@ -140,7 +162,7 @@
            <p class="ship-description">Official guide on using Chrome's built-in security tools to protect your data.</p>
            <div class="ship-actions">
              <a href="https://blog.google/products-and-platforms/products/chrome/5-tips-to-stay-safer-online-with-chrome/" target="_blank" class="ship-cta primary">
-               Read Article
+               Read Guide →
              </a>
            </div>
         </div>
@@ -154,7 +176,7 @@
            <p class="ship-description">Announcing new proactive safety features for Chrome users worldwide.</p>
            <div class="ship-actions">
              <a href="https://blog.google/products-and-platforms/products/chrome/google-chrome-safety-update-september-2024/" target="_blank" class="ship-cta primary">
-               Read Article
+               Read Announcement →
              </a>
            </div>
         </div>
@@ -178,15 +200,7 @@
           </a>
         </article>
 
-        <!-- Project 2: Memoria -->
-        <article class="project-card reveal">
-          <h3 class="project-title">Memoria</h3>
-          <p class="project-subtitle">AI-Curated Browser History</p>
-          <p class="project-description">Replace chrome://history with AI-grouped browsing sessions organized by semantic relevance.</p>
-          <a href="https://github.com/andkamau/memoria" target="_blank" rel="noopener noreferrer" class="project-link">
-            View on GitHub <span class="external-link">↗</span>
-          </a>
-        </article>
+
 
         <!-- Project 3: Hadithi -->
         <article class="project-card reveal">
@@ -230,7 +244,7 @@
         <article class="open-source-item">
           <h4>pympesa <span class="star-count">27★</span></h4>
           <p>Most-starred Python wrapper for M-Pesa mobile payments</p>
-          <a href="https://github.com/andkamau/pympesa" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/pythias-io/pympesa" target="_blank" rel="noopener noreferrer">
             GitHub <span class="external-link">↗</span>
           </a>
         </article>
@@ -238,7 +252,7 @@
         <article class="open-source-item">
           <h4>Aleph</h4>
           <p>Data search and indexing for investigative journalists (OCCRP)</p>
-          <a href="https://github.com/alephdata/aleph" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/alephdata/aleph/commits?author=andkamau" target="_blank" rel="noopener noreferrer">
             GitHub <span class="external-link">↗</span>
           </a>
         </article>
