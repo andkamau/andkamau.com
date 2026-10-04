@@ -1,290 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <title>Andrew Kamau — AI-Native Builder</title>
-  <meta name="description" content="Building intelligent systems for underserved markets. Chrome Safety PM, East African fintech founder, AI product builder.">
-  <meta name="keywords" content="AI, product, builder, emerging markets, Chrome, fintech, Kenya">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Andrew Kamau — AI-Native Builder">
-  <meta property="og:description" content="Building intelligent systems for underserved markets.">
-  <meta property="og:image" content="https://andkamau.com/og-image.png">
-  <meta property="og:url" content="https://andkamau.com">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Andrew Kamau — AI-Native Builder">
-  <meta name="twitter:description" content="Building intelligent systems for underserved markets.">
-  <meta name="twitter:image" content="https://andkamau.com/og-image.png">
-
-  <!-- Favicon -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Andrew Kamau builds AI-native products for underserved markets.">
+  <meta name="color-scheme" content="light dark">
+  <title>Andrew Kamau</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- Mono font for logo -->
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="/styles.css">
-
-
+  <script src="/script.js" defer></script>
 </head>
 <body>
-  <header class="header">
-    <div class="header-content">
-      <a href="/" class="logo"><span class="brand-slash">//</span>AKM</a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-icon">◐</span>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <main id="content">
+    <header class="intro">
+      <div class="intro-heading">
+        <img class="photo" src="/photo.jpg" alt="Andrew Kamau" width="72" height="72">
+        <div>
+          <h1>Andrew Kamau</h1>
+          <p class="quiet">Product builder</p>
+        </div>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <span aria-hidden="true">◐</span>
+        <span class="visually-hidden">Change colour theme</span>
       </button>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <!-- Intro Wrapper (Hero + About) -->
-    <div class="intro-wrapper">
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-photo reveal">
-          <img src="/photo.jpg" alt="Andrew Kamau" width="120" height="120" loading="lazy">
-        </div>
+    <p class="note">I build AI-native products for underserved markets. I spent five years shipping safety features in Google Chrome, and before that a decade building fintech in Africa.</p>
 
-        <div class="hero-content reveal">
-          <h2 class="hero-name">Andrew Kamau</h2>
-          <p class="hero-tagline">AI-native builder</p>
-          <p class="hero-description">Building intelligent systems for underserved markets.</p>
-        </div>
-
-        <div class="hero-links reveal">
-          <a href="https://www.linkedin.com/in/kamauandrew" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-             LinkedIn
-          </a>
-          <a href="https://github.com/andkamau" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-             GitHub
-          </a>
-          <a href="mailto:andrew@andkamau.com" aria-label="Email">
-             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-             Email
-          </a>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="about reveal">
-        <div class="about-content">
-          <p>Building AI-native products at the intersection of emerging technology and underserved users. For the past 5 years, I've been shipping safety features at Google Chrome to billions of users. Before that, I spent 10 years building fintech products in Africa — co-founding a company, leading product at another, and contributing to investigative journalism tech infrastructure.</p>
-
-          <p>I'm currently focused on how AI agents can be safely deployed in high-constraint environments: e.g. limited connectivity, resource-scarce devices, and markets where trust is earned differently.</p>
-        </div>
-      </section>
-    </div>
-
-    <!-- Latest Section -->
-    <section class="latest-ships">
-      <div class="section-header">
-        <span class="section-label">Latest</span>
-      </div>
-
-      <div class="ships-grid">
-        <!-- Memoria (Chrome Ext) -->
-        <div class="ship-item reveal">
-          <div class="ship-header">
-            <h3 class="ship-title">Memoria</h3>
-            <span class="ship-badge">Chrome extension</span>
-          </div>
-          <p class="ship-description">Replace chrome://history with AI-grouped browsing sessions organized by semantic relevance.</p>
-          <div class="ship-actions">
-            <a href="https://chromewebstore.google.com/detail/memoria/cleecahcpnelippkmdcjhlbpllnibkdd" target="_blank" class="ship-cta primary">
-              Install Extension →
-            </a>
-          </div>
-        </div>
-
-        <!-- 1. Gistify (Chrome Ext) -->
-        <div class="ship-item reveal">
-          <div class="ship-header">
-            <h3 class="ship-title">Gistify</h3>
-            <span class="ship-badge">Chrome extension</span>
-          </div>
-          <p class="ship-description">Transform your Chrome reading list into AI-powered summaries.</p>
-          <div class="ship-actions">
-            <a href="https://chromewebstore.google.com/detail/mdelhoioekbgjfkoalaoapebndllmlde" target="_blank" class="ship-cta primary">
-              Try It Out →
-            </a>
-          </div>
-        </div>
-
-        <!-- 3. Video (Moved up) -->
-        <div class="ship-item reveal">
-           <div class="ship-header">
-             <h3 class="ship-title">Chrome Safety</h3>
-             <span class="ship-badge">Talk</span>
-           </div>
-           <p class="ship-description">Product Manager talk on building online safety features for billions.</p>
-           <div class="ship-actions">
-             <a href="https://www.youtube.com/watch?v=EsyoevqJ9Fo" target="_blank" class="ship-cta primary">
-               Watch Talk →
-             </a>
-           </div>
-        </div>
-
-        <!-- 2. OmniPrompt (PyPI) -->
-        <div class="ship-item reveal">
-          <div class="ship-header">
-            <h3 class="ship-title">OmniPrompt</h3>
-            <span class="ship-badge">Python library</span>
-          </div>
-          <p class="ship-description">Unified CLI for 6+ LLM providers. Simplify your AI workflow.</p>
-          <div class="ship-actions">
-            <a href="https://pypi.org/project/omniprompt/" target="_blank" class="ship-cta primary">
-              Get Library →
-            </a>
-          </div>
-        </div>
-
-        <!-- 4. Google Blog 1 -->
-        <div class="ship-item reveal">
-           <div class="ship-header">
-             <h3 class="ship-title">5 Tips to Stay Safer</h3>
-             <span class="ship-badge">Google Blog</span>
-           </div>
-           <p class="ship-description">Official guide on using Chrome's built-in security tools to protect your data.</p>
-           <div class="ship-actions">
-             <a href="https://blog.google/products-and-platforms/products/chrome/5-tips-to-stay-safer-online-with-chrome/" target="_blank" class="ship-cta primary">
-               Read Guide →
-             </a>
-           </div>
-        </div>
-
-        <!-- 5. Google Blog 2 -->
-        <div class="ship-item reveal">
-           <div class="ship-header">
-             <h3 class="ship-title">Safety Update</h3>
-             <span class="ship-badge">Google Blog</span>
-           </div>
-           <p class="ship-description">Announcing new proactive safety features for Chrome users worldwide.</p>
-           <div class="ship-actions">
-             <a href="https://blog.google/products-and-platforms/products/chrome/google-chrome-safety-update-september-2024/" target="_blank" class="ship-cta primary">
-               Read Announcement →
-             </a>
-           </div>
-        </div>
-      </div>
+    <section aria-labelledby="work-heading">
+      <h2 id="work-heading">A few things I have worked on</h2>
+      <ul class="work-list">
+        <li><a href="https://chromewebstore.google.com/detail/memoria/cleecahcpnelippkmdcjhlbpllnibkdd" target="_blank" rel="noopener noreferrer">Memoria</a> — an extension that groups browsing history into meaningful sessions.</li>
+        <li><a href="https://chromewebstore.google.com/detail/mdelhoioekbgjfkoalaoapebndllmlde" target="_blank" rel="noopener noreferrer">Gistify</a> — an extension that turns a Chrome reading list into summaries.</li>
+        <li><a href="https://www.youtube.com/watch?v=EsyoevqJ9Fo" target="_blank" rel="noopener noreferrer">Chrome Safety</a> — a talk about building online safety features at scale.</li>
+        <li><a href="https://pypi.org/project/omniprompt/" target="_blank" rel="noopener noreferrer">OmniPrompt</a> — a command-line tool for working with several LLM providers.</li>
+        <li><a href="https://blog.google/products-and-platforms/products/chrome/5-tips-to-stay-safer-online-with-chrome/" target="_blank" rel="noopener noreferrer">5 Tips to Stay Safer</a> — a Google guide to Chrome security tools.</li>
+        <li><a href="https://blog.google/products-and-platforms/products/chrome/google-chrome-safety-update-september-2024/" target="_blank" rel="noopener noreferrer">Chrome Safety Update</a> — a Google post about proactive safety features.</li>
+        <li><a href="https://github.com/andkamau/agent-orchestrator" target="_blank" rel="noopener noreferrer">Agent Orchestrator</a> — a persistent multi-agent workforce.</li>
+        <li><a href="https://github.com/andkamau/hadithi" target="_blank" rel="noopener noreferrer">Hadithi</a> — articles made into podcast-style audio.</li>
+        <li><a href="https://github.com/andkamau/stawi2" target="_blank" rel="noopener noreferrer">Stawi</a> — an AI plant-care companion.</li>
+        <li><a href="https://medium.com/pia-blog/chat-bots-pia-c02a8f9fb668" target="_blank" rel="noopener noreferrer">Chat Bots &amp; PIA</a> — notes on conversational interfaces before generative AI.</li>
+        <li><a href="https://github.com/pythias-io/pympesa" target="_blank" rel="noopener noreferrer">pympesa</a> — a Python wrapper for M-Pesa mobile payments.</li>
+        <li><a href="https://github.com/alephdata/aleph/commits?author=andkamau" target="_blank" rel="noopener noreferrer">Aleph</a> — search and indexing software for investigative journalists.</li>
+      </ul>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects">
-      <div class="section-header">
-        <span class="section-label">Featured</span>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1: Agent Orchestrator -->
-        <article class="project-card reveal">
-          <h3 class="project-title">Agent Orchestrator</h3>
-          <p class="project-subtitle">Persistent Multi-Agent Workforce</p>
-          <p class="project-description">Hire specialized AI agents that maintain context across sessions and generate structured outputs.</p>
-          <a href="https://github.com/andkamau/agent-orchestrator" target="_blank" rel="noopener noreferrer" class="project-link">
-            View on GitHub <span class="external-link">↗</span>
-          </a>
-        </article>
-
-
-
-        <!-- Project 3: Hadithi -->
-        <article class="project-card reveal">
-          <h3 class="project-title">Hadithi</h3>
-          <p class="project-subtitle">Articles to Podcast Audio</p>
-          <p class="project-description">Save articles from any app, listen as podcast-style audio with host and expert voices.</p>
-          <a href="https://github.com/andkamau/hadithi" target="_blank" rel="noopener noreferrer" class="project-link">
-            View on GitHub <span class="external-link">↗</span>
-          </a>
-        </article>
-
-        <!-- Project 4: Stawi -->
-        <article class="project-card reveal">
-          <h3 class="project-title">Stawi</h3>
-          <p class="project-subtitle">AI Plant Care Companion</p>
-          <p class="project-description">Dynamic feed with AI-generated care tips, watering reminders, and plant identification.</p>
-          <a href="https://github.com/andkamau/stawi2" target="_blank" rel="noopener noreferrer" class="project-link">
-            View on GitHub <span class="external-link">↗</span>
-          </a>
-        </article>
-
-        <!-- Project 5: Chat Bots (Medium) -->
-        <article class="project-card reveal">
-          <h3 class="project-title">Chat Bots & PIA</h3>
-          <p class="project-subtitle">Pre-LLM Conversational AI</p>
-          <p class="project-description">Reflections on building conversational interfaces for businesses before the generative AI wave.</p>
-          <a href="https://medium.com/pia-blog/chat-bots-pia-c02a8f9fb668" target="_blank" rel="noopener noreferrer" class="project-link">
-            Read on Medium <span class="external-link">↗</span>
-          </a>
-        </article>
-      </div>
+    <section aria-labelledby="talks-heading">
+      <h2 id="talks-heading">Talks</h2>
+      <ul class="talk-list">
+        <li>International Open Data Con, Madrid</li>
+        <li>Africa Open Data Con, Nairobi</li>
+        <li>Media Party Africa, Cape Town</li>
+        <li>Nairobi Tech Week — “Chatbots for businesses”</li>
+        <li>Facebook Developer Circle, Nairobi</li>
+      </ul>
     </section>
 
-    <!-- Open Source Section -->
-    <section class="open-source">
-      <div class="section-header">
-        <h2>Open Source Contributions</h2>
-      </div>
-
-      <div class="open-source-list reveal">
-        <article class="open-source-item">
-          <h4>pympesa <span class="star-count">27★</span></h4>
-          <p>Most-starred Python wrapper for M-Pesa mobile payments</p>
-          <a href="https://github.com/pythias-io/pympesa" target="_blank" rel="noopener noreferrer">
-            GitHub <span class="external-link">↗</span>
-          </a>
-        </article>
-
-        <article class="open-source-item">
-          <h4>Aleph</h4>
-          <p>Data search and indexing for investigative journalists (OCCRP)</p>
-          <a href="https://github.com/alephdata/aleph/commits?author=andkamau" target="_blank" rel="noopener noreferrer">
-            GitHub <span class="external-link">↗</span>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Past Talks -->
-    <section class="past-talks-section">
-      <button id="toggle-past-talks" class="toggle-button">View past talks →</button>
-      <div id="past-talks" class="past-talks-container hidden">
-        <h4>Selected Speaking Engagements</h4>
-        <ul class="past-talks-list">
-          <li>International Open Data Con, Madrid</li>
-          <li>Africa Open Data Con, Nairobi</li>
-          <li>Media Party Africa, Cape Town</li>
-          <li>Nairobi Tech Week — "Chatbots for businesses"</li>
-          <li>Facebook Developer Circle, Nairobi</li>
-        </ul>
-      </div>
-    </section>
-
+    <footer>
+      <p>Find me on <a href="https://www.linkedin.com/in/kamauandrew" target="_blank" rel="noopener noreferrer">LinkedIn</a> or <a href="https://github.com/andkamau" target="_blank" rel="noopener noreferrer">GitHub</a>, or <a href="mailto:hello@andkamau.com">send me an email</a>.</p>
+    </footer>
   </main>
-
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/kamauandrew" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-      <a href="https://github.com/andkamau" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-      <a href="mailto:hello@andkamau.com" aria-label="Email">Email</a>
-    </div>
-    <p class="footer-text">© 2026 Andrew Kamau</p>
-  </footer>
-
-  <script src="/script.js"></script>
 </body>
 </html>
