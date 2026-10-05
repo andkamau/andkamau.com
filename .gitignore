@@ -5,3 +5,13 @@ Thumbs.db
 *.swo
 TASKS.md
 .review-input/
+ANALYTICS_ENDPOINT_CONTRACT.md
+.env
+.env.*
+*.pem
+*.key
+*.sqlite
+*.sqlite3
+*.db
+*.log
+.vercel/
