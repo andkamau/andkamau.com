@@ -46,7 +46,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline
 .intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding-bottom: 26px; border-bottom: 1px solid var(--rule); }
 .intro-heading { display: flex; align-items: flex-start; gap: 17px; min-width: 0; }
 .intro-heading > div { min-width: 0; }
-.photo { width: 74px; height: 74px; padding: 3px; border: 1px solid var(--rule); border-radius: 18px; background: var(--background); box-shadow: 0 12px 28px rgba(63, 48, 31, 0.09); object-fit: cover; }
+.photo { width: 74px; height: 74px; padding: 3px; border: 1px solid var(--rule); border-radius: 38% 14% 38% 14%; background: var(--background); box-shadow: 0 12px 28px rgba(63, 48, 31, 0.09); object-fit: cover; }
 .photo { flex: 0 0 auto; margin-top: 3px; }
 h1, h2, h3, p { margin: 0; }
 h1 { font-size: clamp(1.52rem, 3vw, 1.78rem); font-weight: 600; letter-spacing: -0.025em; line-height: 1.08; }
@@ -60,7 +60,7 @@ h2 { margin-bottom: 22px; font-size: 1.25rem; font-weight: 600; letter-spacing: 
 .contact-links .export-control { display: inline-flex; align-items: center; gap: 6px; padding: 3px 0; border: 0; background: transparent; color: var(--muted); font: 400 0.75rem/1.5 Georgia, serif; text-decoration: none; cursor: pointer; border-radius: 3px; }
 .contact-links .export-control[hidden] { display: none; }
 .contact-links .export-control:hover { color: var(--text); background: var(--row-hover); }
-.md-badge { border: 1px solid var(--rule); border-radius: 3px; padding: 0 3px; font: 0.62rem/1.5 monospace; }
+.md-badge { border: 1px solid var(--rule); border-radius: 6px 2px 6px 2px; padding: 0 3px; font: 0.62rem/1.5 monospace; }
 .theme-toggle { flex: 0 0 auto; margin: 3px 0 0; padding: 6px; color: var(--muted); border: 1px solid transparent; border-radius: 999px; background: transparent; cursor: pointer; font: inherit; font-size: 0.95rem; line-height: 1; transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease; }
 .theme-toggle:hover { color: var(--text); border-color: var(--rule); background: var(--row-hover); }
 .content-section { margin-top: 36px; }
@@ -69,8 +69,8 @@ h2 { margin-bottom: 22px; font-size: 1.25rem; font-weight: 600; letter-spacing: 
 .proof-links, .talk-list { margin: 0; padding: 0; list-style: none; }
 .proof-links { display: flex; flex-flow: row wrap; gap: 4px 20px; margin-top: 10px; font-size: 0.94rem; line-height: 1.5; }
 .proof-links li { display: flex; align-items: baseline; gap: 9px; max-width: 100%; padding: 3px 0; }
-.proof-links li::before { content: ""; flex: 0 0 5px; width: 5px; height: 5px; border: 1px solid var(--muted); transform: translateY(-2px) rotate(45deg); transition: transform 160ms ease, background-color 160ms ease; }
-.proof-links li:hover::before { background: var(--link); transform: translateY(-2px) rotate(0); }
+.proof-links li::before { content: ""; flex: 0 0 5px; width: 5px; height: 5px; border: 1px solid var(--muted); border-radius: 38% 14% 38% 14%; transform: translateY(-2px); transition: background-color 160ms ease; }
+.proof-links li:hover::before { background: var(--link); }
 .proof-links .featured-proof { flex-basis: 100%; }
 .proof-links .featured-proof::before { display: none; }
 .proof-links .featured-proof a { font-weight: 600; }
@@ -87,7 +87,7 @@ footer .contact-links { margin-top: 0; }
   body { font-size: 17px; }
   .page { width: min(100% - 32px, 660px); padding-top: 42px; }
   .intro { padding-bottom: 22px; }
-  .photo { width: 66px; height: 66px; border-radius: 16px; }
+  .photo { width: 66px; height: 66px; }
   .content-section { margin-top: 30px; }
   .intro-heading { gap: 13px; }
   .intro { gap: 10px; }
