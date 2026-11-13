@@ -56,6 +56,11 @@ h2 { margin-bottom: 22px; font-size: 1.25rem; font-weight: 600; letter-spacing: 
 .contact-links { display: flex; flex-flow: row wrap; gap: 4px 16px; margin-top: 10px; font-size: 0.9rem; font-weight: 400; line-height: 1.5; }
 .contact-links a { color: var(--muted); padding: 3px 0; font-size: inherit; font-weight: 400; }
 .contact-links a:hover { color: var(--text); }
+.portfolio-export { display: inline-flex; align-items: center; border-left: 1px solid var(--rule); padding-left: 12px; margin-left: 2px; }
+.contact-links .export-control { display: inline-flex; align-items: center; gap: 6px; padding: 3px 0; border: 0; background: transparent; color: var(--muted); font: 400 0.75rem/1.5 Georgia, serif; text-decoration: none; cursor: pointer; border-radius: 3px; }
+.contact-links .export-control[hidden] { display: none; }
+.contact-links .export-control:hover { color: var(--text); background: var(--row-hover); }
+.md-badge { border: 1px solid var(--rule); border-radius: 3px; padding: 0 3px; font: 0.62rem/1.5 monospace; }
 .theme-toggle { flex: 0 0 auto; margin: 3px 0 0; padding: 6px; color: var(--muted); border: 1px solid transparent; border-radius: 999px; background: transparent; cursor: pointer; font: inherit; font-size: 0.95rem; line-height: 1; transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease; }
 .theme-toggle:hover { color: var(--text); border-color: var(--rule); background: var(--row-hover); }
 .content-section { margin-top: 36px; }
@@ -86,6 +91,7 @@ footer .contact-links { margin-top: 0; }
   .content-section { margin-top: 30px; }
   .intro-heading { gap: 13px; }
   .intro { gap: 10px; }
+  .portfolio-export { border-left: 0; padding-left: 0; margin-left: 0; }
   .proof-links { column-gap: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {

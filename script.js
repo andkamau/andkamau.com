@@ -29,3 +29,45 @@
     }
   });
 })();
+
+(function () {
+  'use strict';
+  var button = document.getElementById('copy-portfolio');
+  var status = document.getElementById('copy-status');
+  var label = document.getElementById('copy-label');
+  var link = document.getElementById('view-portfolio');
+  if (!button || !status || !label || !link || !window.fetch) return;
+  if (!navigator.clipboard || !navigator.clipboard.writeText) return;
+
+  // Load first so the clipboard write stays directly inside the user's click.
+  window.fetch(link.href, { cache: 'no-cache', credentials: 'same-origin' })
+    .then(function (response) {
+      if (!response.ok) throw new Error('Portfolio unavailable');
+      return response.text();
+    })
+    .then(function (markdown) {
+      if (!markdown.startsWith('# Andrew Kamau\n')) throw new Error('Invalid portfolio');
+      button.hidden = false;
+      link.hidden = true;
+      var reset;
+      button.addEventListener('click', function () {
+        window.clearTimeout(reset);
+        status.textContent = '';
+        navigator.clipboard.writeText(markdown).then(function () {
+          label.textContent = 'Portfolio copied';
+          status.textContent = 'Portfolio copied';
+          reset = window.setTimeout(function () {
+            label.textContent = 'Copy for your agent';
+            status.textContent = '';
+          }, 2500);
+        }).catch(function () {
+          button.hidden = true;
+          link.hidden = false;
+          link.focus();
+          status.textContent = 'Copy was blocked. Download the portfolio instead.';
+        });
+      });
+    }).catch(function () {
+      status.textContent = 'Download the portfolio to read or copy it.';
+    });
+})();

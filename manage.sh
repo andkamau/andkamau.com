@@ -6,6 +6,7 @@ PORT=8000
 function serve() {
     echo "Starting local server at http://127.0.0.1:$PORT"
     if command -v python3 &>/dev/null; then
+        python3 scripts/export_portfolio.py || return 1
         python3 -m http.server "$PORT" --bind 127.0.0.1
     else
         echo "Error: Python not found. Please install Python to use the server."
